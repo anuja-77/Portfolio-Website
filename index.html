@@ -1,0 +1,170 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="Viewport" content="width=device-width,initial-scale=1.0">
+        <title>Personal portfolio website </title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/82720555d2.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="header">
+           
+                <nav>
+                    <ul id="sidemenu">
+                        <li><a href="#header"> Home </a></li>
+                        <li><a href="#about"> About </a></li>
+                        <li><a href="#services"> Interest </a></li>
+                        <li><a href="#contact"> Contact </a></li>
+                    </ul>
+                </nav>
+                <div class="header-text">  
+                    <p>Hey , I am <b>Anuja Sanjay Ahire </b>an Enthusiastic CS Student <br >From Nasik</p>
+                  <!-- <img align="right" width="400" height="400" src="https://miro.medium.com/v2/resize:fit:1358/0*yBvA5CnEX3Sd4aod.gif">    -->
+                </div>       
+        </div>
+        <!-------------------------about ------------------------------>
+        <div id="about">
+            <div class="container">
+                        <h1 calss="sub-title">About Me</h1>
+                        <p>Hello,<br>
+                            I am currently pursuing my Bachelor's degree in Computer Science During my time as a student, 
+                            I have actively participated in group projects, collaborating with diverse minds to achieve collective goals efficiently.
+                            I am enthusiastic about contributing my skills and knowledge to real-world applications and projects 
+                            that can make a positive impact on society as a fresher .I am excited to embark on new challenges, work with inspiring mentors, 
+                            and learn from seasoned professionals in the industry. 
+
+                        </p>
+
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')" >Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links"onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Web </span><br>Development </li>
+                                <li><span>Mobile App </span><br>Development </li>
+                                <li><span>Languages known </span><br>c++,java ,python,php </li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>date - 2021 </span><br>Internship of Web Development and UIPath Studio at ProAzure Software Solutions Pvt. Ltd. Pune</li>
+                                <li><span>date - 2023 </span><br>Full stack Web Development Internship of NullClass </li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2019 </span><br>SSC Passout <br>Score : 85.20%</li>
+                                <li><span>2019-22 </span><br>Diploma from K.K.Wagh Polytechnic,Nasik  <br>Score : 92.23%</li>
+                                <li><span>2022-25 </span><br>B.E from K.K.Wagh Institute of Engineering Education,Nasik (Pursuing)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+    <!-------------------SERVICES-------------------------->
+
+<div id="services">
+    <div class="container">
+        <h1 calss="sub-title">My Areas of Interest</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Developement</h2>
+                <p> I like web development, particularly working with fundamental languages 
+                    like HTML, CSS, and JavaScript to build interactive and visually appealing websites.</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-crop"></i>
+                <h2>App Developement</h2>
+                <p> I derive immense joy from the process of creating Android apps with JAVA, 
+                    where I can blend creativity with technical prowess to bring innovative ideas.</p>
+            </div>
+            <div>
+                <i class="fa-brands fa-app-store"></i>
+                <h2>Cloud Computing</h2>
+                <p> I am deeply interested in AWS cloud computing and Hence, 
+                    I am actively pursuing official certifications in CCNA and Linux Operating System . </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!------------------------CONTACT------------------------>
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact me</h1>
+                <p>contact@gmail.com</p>                <!---icon of message inside p tag-->
+                <p>9102090190</p>                       <!---icon of phone inside p tag-->
+                <div class="social-icons">
+                    <a href=""></a>
+                    <a href=""></a>                        <!---href="social media link"-->
+                    <a href=""></a>
+                    <a href=""></a>                        <!--icon social media-->
+                </div>
+                <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="name" placeholder="your name " required>
+                    <input type="mail" name="email" placeholder="your email " required>
+                    <textarea name="message" rows="6" placeholder="your message"></textarea>
+                    <button type="submit" class="btn btn2" >Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>&copy Copyright to Anuja. </p>           <!--heart icon from website -->
+    </div>
+</div>
+
+    <script>
+        var tablinks=document.getElementsByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("tab-contents");
+        function opentab(tabname)
+        {
+            for(tablink of tablinks)
+            {
+                tablink.classList.remove("active-link")
+            }
+            for(tabcontent of tabcontents)
+            {
+                tabcontent.classList.remove("active-tab")
+            }
+            event.currentTarget.classList.add("active-link")
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+    <script>
+        var sidemenu=document.getElementById(sidemenu);
+
+        function openmenu(){
+            sidemenus.style.right="0";
+        }
+        function closemenu(){
+            sidemenus.style.right="-200px";
+
+        }
+    </script>
+
+<script>
+    const scriptURL = '<https://script.google.com/macros/s/AKfycbylmFKOMXUqV75Q_kzW3ikOHZMDkJ-197xVc0cLNr2TNGd90_QLot4FXh9DW-iCOZLH/exec>'
+    const form = document.forms['submit-to-google-sheet']
+         
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+    </body>
+
+</html>
